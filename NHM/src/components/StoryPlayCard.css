@@ -56,9 +56,10 @@
   justify-content: center;
   align-items: center;
   z-index: 3;
+  cursor: pointer;
 }
 
-h1{
+.title{
   position: absolute;
   top: 16px;
   left: 16px;
@@ -73,13 +74,6 @@ h1{
   width: calc(100% - var(--cutout-width));
   bottom: calc(var(--cutout-height)/2 - 1.2em);
   margin-top: auto;
-  text-align: center;
-}
-
-.backdrop-filter-container{
-  padding: 4px 8px;
-  border-radius: 20px;
-  backdrop-filter: blur(4px);
 }
 
 h3{

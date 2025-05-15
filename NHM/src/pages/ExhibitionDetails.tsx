@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ExhibitionDetails: React.FC = () => {
+export const ExhibitionDetails: React.FC = () => {
     return (
         <div>
             <h1>Exhibition Details</h1>
@@ -8,5 +8,3 @@ const ExhibitionDetails: React.FC = () => {
         </div>
     );
 };
-
-export default ExhibitionDetails;

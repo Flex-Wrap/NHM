@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Exhibitions: React.FC = () => {
+export const Exhibitions: React.FC = () => {
     return (
         <div>
             <h1>Exhibitions</h1>
@@ -8,5 +8,3 @@ const Exhibitions: React.FC = () => {
         </div>
     );
 };
-
-export default Exhibitions;

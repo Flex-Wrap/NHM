@@ -1,0 +1,114 @@
+// src/firebase/firebaseDb.ts
+import { db } from "./firebase";
+import {
+  collection,
+  getDocs,
+  query,
+  orderBy,
+  where,
+  onSnapshot,
+} from "firebase/firestore";
+
+export type Event = {
+  id: string;
+  eventName: string;
+  date: string; // ISO format
+  imgUrl: string;
+  description: string;
+};
+
+export type Story = {
+  id: string;
+  storyTitle: string;
+  imageUrl: string;
+};
+
+export type UsefulLink = {
+  id: string;
+  label: string;
+};
+
+// Optimize Unsplash or generic image URLs
+function optimizeImageUrl(
+  url: string,
+  width = 300,
+  height = 360,
+  quality = 70
+): string {
+  return `${url}?auto=format&fit=crop&w=${width}&h=${height}&q=${quality}`;
+}
+
+// 🔁 Realtime listener for upcoming events
+export function subscribeToEvents(callback: (events: Event[]) => void) {
+  const now = new Date().toISOString();
+
+  const q = query(
+    collection(db, "Events"), // all lowercase now
+    where("date", ">=", now),
+    orderBy("date")
+  );
+
+  return onSnapshot(q, (snapshot) => {
+    const events: Event[] = snapshot.docs.map((doc) => {
+      const data = doc.data();
+      return {
+        id: doc.id,
+        eventName: data.eventName,
+        date: data.date,
+        imgUrl: optimizeImageUrl(data.imgUrl),
+        description: data.description,
+      };
+    });
+
+    callback(events);
+  });
+}
+
+// 🕓 One-time fetch of upcoming events
+export async function getUpcomingEvents(count: number = 2): Promise<Event[]> {
+  const now = new Date().toISOString();
+
+  const q = query(
+    collection(db, "Events"),
+    where("date", ">=", now),
+    orderBy("date")
+  );
+
+  const snapshot = await getDocs(q);
+  const events: Event[] = snapshot.docs.map((doc) => {
+    const data = doc.data();
+    return {
+      id: doc.id,
+      eventName: data.eventName,
+      date: data.date,
+      imgUrl: optimizeImageUrl(data.imgUrl),
+      description: data.description,
+    };
+  });
+
+  return events.slice(0, count);
+}
+
+// 📚 Stories (one-time fetch)
+export async function getStories(): Promise<Story[]> {
+  const snapshot = await getDocs(collection(db, "stories"));
+
+  return snapshot.docs.map((doc) => {
+    const data = doc.data();
+    return {
+      id: doc.id,
+      storyTitle: data.title,
+      imageUrl: optimizeImageUrl(data.imageUrl),
+    };
+  });
+}
+
+// 🔗 Useful Links (one-time fetch)
+export async function getUsefulLinks(): Promise<UsefulLink[]> {
+  const snapshot = await getDocs(collection(db, "usefulLinks"));
+
+  return snapshot.docs.map((doc) => ({
+    id: doc.id,
+    label: doc.data().label,
+  }));
+}

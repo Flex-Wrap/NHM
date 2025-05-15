@@ -1,20 +1,16 @@
-import React from 'react';
-import { StoryPlayCard } from '../components/StoryPlayCard';
-import './Discover.css'; // Add this import for styles
+import React from "react";
+import { Stories } from "../components/Stories";
+import "./Discover.css";
+import { UpcomingEvents } from "../components/UpcomingEvents";
+import { UsefulLinks } from "../components/UsefulLinks";
 
-const Discover: React.FC = () => {
-    return (
-        <>
-            <div className="story-scroll-container">
-                <StoryPlayCard
-                    imageUrl="https://images.unsplash.com/photo-1577971132997-c10be9372519?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                />
-                <StoryPlayCard
-                    imageUrl="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1170&auto=format&fit=crop"
-                />
-            </div>
-        </>
-    );
+export const Discover: React.FC = () => {
+
+  return (
+    <div className="discover-container">
+      <Stories className="story-scroll-container content"/>
+      <UpcomingEvents className="upcoming-events-container content"/>
+      <UsefulLinks className="useful-links-container content"/>
+    </div>
+  );
 };
-
-export default Discover;

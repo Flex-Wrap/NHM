@@ -6,7 +6,7 @@ import IconExhibitions from "../assets/icon-exhibitions.svg?react";
 import IconMap from "../assets/icon-map.svg?react";
 import IconSchedule from "../assets/icon-events.svg?react";
 
-const Navbar: React.FC = () => {
+export const Navbar: React.FC = () => {
     return (
         <nav className="navbar">
             <NavLink to="/" className={({ isActive }) => `navbar-item ${isActive ? "active" : ""}`}>
@@ -31,5 +31,3 @@ const Navbar: React.FC = () => {
         </nav>
     );
 };
-
-export default Navbar;

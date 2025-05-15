@@ -38,6 +38,8 @@
   /* Neutrals */
   --neutral-50: #FAFAFA;
   --neutral-100: #E0EDF7;
+
+  --grey: #989898;
 }
 
 
@@ -85,7 +87,7 @@ h2 {
 }
 
 h3 {
-  font-family: 'Averia Serif Libre', serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: normal;
   font-size: 18px;
   line-height: auto;
@@ -105,10 +107,6 @@ p {
   line-height: 140%;
 }
 
-.card{
-    border-radius: 20px;
-}
-
 .content{
-    padding: 26px 18px;
+  padding: 0 18px 26px 18px;
 }
