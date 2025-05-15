@@ -104,3 +104,11 @@ p {
   font-size: 14px;
   line-height: 140%;
 }
+
+.card{
+    border-radius: 20px;
+}
+
+.content{
+    padding: 26px 18px;
+}
