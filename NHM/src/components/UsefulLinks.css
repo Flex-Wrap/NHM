@@ -7,7 +7,6 @@
 
 .useful-links-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 14px 0;
   border-bottom: 1px solid var(--wheat-300);
@@ -16,6 +15,15 @@
 
 .useful-links-item:last-child {
   border-bottom: none;
+}
+
+.useful-links-item a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .arrow-icon {

@@ -17,17 +17,6 @@ export type Event = {
   description: string;
 };
 
-export type Story = {
-  id: string;
-  storyTitle: string;
-  imageUrl: string;
-};
-
-export type UsefulLink = {
-  id: string;
-  label: string;
-};
-
 // Optimize Unsplash or generic image URLs
 function optimizeImageUrl(
   url: string,
@@ -47,7 +36,6 @@ export function subscribeToEvents(callback: (events: Event[]) => void) {
     where("date", ">=", now),
     orderBy("date")
   );
-
   return onSnapshot(q, (snapshot) => {
     const events: Event[] = snapshot.docs.map((doc) => {
       const data = doc.data();
@@ -87,28 +75,4 @@ export async function getUpcomingEvents(count: number = 2): Promise<Event[]> {
   });
 
   return events.slice(0, count);
-}
-
-// 📚 Stories (one-time fetch)
-export async function getStories(): Promise<Story[]> {
-  const snapshot = await getDocs(collection(db, "stories"));
-
-  return snapshot.docs.map((doc) => {
-    const data = doc.data();
-    return {
-      id: doc.id,
-      storyTitle: data.title,
-      imageUrl: optimizeImageUrl(data.imageUrl),
-    };
-  });
-}
-
-// 🔗 Useful Links (one-time fetch)
-export async function getUsefulLinks(): Promise<UsefulLink[]> {
-  const snapshot = await getDocs(collection(db, "usefulLinks"));
-
-  return snapshot.docs.map((doc) => ({
-    id: doc.id,
-    label: doc.data().label,
-  }));
 }

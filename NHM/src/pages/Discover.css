@@ -49,7 +49,8 @@
 }
 
 .useful-links-container {
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
