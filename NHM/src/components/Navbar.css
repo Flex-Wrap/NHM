@@ -11,16 +11,8 @@
   padding: 10px 14px;
   z-index: 1000;
   overflow: hidden;
-}
-
-.navbar::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: var(--moss-700);
-  opacity: 0.8;
-  z-index: -1;
-  border-radius: 30px;
+  background-color: color(from var(--moss-700) srgb r g b/0.8);
+  backdrop-filter: blur(4px);
 }
 
 .navbar-item {

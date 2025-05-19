@@ -7,7 +7,7 @@ import { UsefulLinks } from "../components/UsefulLinks";
 export const Discover: React.FC = () => {
 
   return (
-    <div className="discover-container">
+    <div className="scrollable-container">
       <Stories className="story-scroll-container content"/>
       <UpcomingEvents className="upcoming-events-container content"/>
       <UsefulLinks className="useful-links-container content"/>

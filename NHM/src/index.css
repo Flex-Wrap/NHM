@@ -22,7 +22,7 @@
   --wheat-150: #FFFAED;
 
   /* Orange */
-  --orange-850: #472E08;
+  --orange-850: #472e08;
   --orange-700: #C17C15;
   --orange-500: #ED991B;
   --orange-300: #F4C276;
@@ -107,6 +107,25 @@ p {
   line-height: 140%;
 }
 
+/* Containers */
+.scrollable-container {
+  position: relative;
+  padding-bottom: 120px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+.scrollable-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
 .content{
   padding: 26px 18px;
+  padding-top: 0;
+}
+
+.back-button-container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 18px;
 }
