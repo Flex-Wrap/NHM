@@ -1,11 +1,18 @@
-import { useState } from 'react'
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import SolutionPage from "./pages/SolutionPage";
+import Navbar from "./components/NavBar";
 
 function App() {
   return (
     <>
-      <h1>Vite + React</h1>
+      <Navbar />
+      <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/solution" element={<SolutionPage />} />
+      </Routes>
     </>
-  )
+  );
 }
 
 export default App

@@ -1,0 +1,34 @@
+import React from 'react';
+
+interface CardProps {
+    imgSrc: string;
+    header: string;
+    text: string;
+    link?: string;
+    imgAlt?: string;
+}
+
+const Card: React.FC<CardProps> = ({
+    imgSrc,
+    header,
+    text,
+    link = "//bachelor.au.dk/",
+    imgAlt = "",
+}) => (
+    <div className="aubanner hastext aubanner-2 bg-dark-magenta  csc-default" style={{ backgroundColor: "#f5f5f5" }}>
+        <a href={link}>
+            <img
+                src={imgSrc}
+                width="670"
+                height="320"
+                alt={imgAlt}
+            />
+            <div className="aubanner-content" style={{ padding: "0 16px" }}>
+                <h2>{header}</h2>
+                <p>{text}</p>
+            </div>
+        </a>
+    </div>
+);
+
+export default Card;
