@@ -20,12 +20,12 @@ const Card: React.FC<CardProps> = ({
             <img
                 src={imgSrc}
                 width="670"
-                height="320"
+                height="160"
                 alt={imgAlt}
             />
             <div className="aubanner-content" style={{ padding: "0 16px" }}>
                 <h3>{header}</h3>
-                <p>{text}</p>
+                <p style={{fontSize: "13px"}}>{text}</p>
             </div>
         </a>
     </div>

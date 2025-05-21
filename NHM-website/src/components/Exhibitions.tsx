@@ -25,7 +25,7 @@ const cards = [
     {
     imgSrc: safari,
     header: "Expedition to Africa",
-    text: "A 1948 Danish expedition to Africa collected animals for museum taxidermy—revealing a complex legacy of science, display, and colonialism.",
+    text: "A 1948 Danish expedition to Africa collected animals for museum taxidermy—revealing a complex legacy of science.",
     link: "/",
     imgAlt: "Expedition to Africa"
   },
