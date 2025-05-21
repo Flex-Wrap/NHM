@@ -1,55 +1,50 @@
 import React, { useRef, useEffect } from "react";
 import Card from "./Card";
-import hero1png from "../assets/hero1.png";
+import beetles from "../assets/beetles.jpg";
+import oops from '../assets/oops.jpg';
+import safari from '../assets/safari.jpg';
+import global from '../assets/global-backyard.jpg';
+import nature from '../assets/nature.jpg';
 
 const cards = [
   {
-    imgSrc: hero1png,
-    header: "Bachelor",
-    text: "Hvis du er i gang med eller har afsluttet en gymnasial eksamen, kan du søge ind på en 3-årig bacheloruddannelse. Find din bacheloruddannelse her",
-    link: "//bachelor.au.dk/",
-    imgAlt: "Bachelor"
+    imgSrc: beetles,
+    header: "BEETLES!",
+    text: "A striking collection of beetles from around the world, celebrating their beauty and diversity.",
+    link: "/",
+    imgAlt: "BEETLES!"
   },
   {
-    imgSrc: hero1png,
-    header: "Master",
-    text: "Læs videre på en 2-årig kandidatuddannelse efter din bachelor. Find din kandidatuddannelse her",
-    link: "//kandidat.au.dk/",
-    imgAlt: "Master"
+    imgSrc: oops,
+    header: "Oops",
+    text: "Explore the astonishing role of coincidence in the universe, from everyday quirks to the ultimate fluke—the Big Bang.",
+    link: "/",
+    imgAlt: "Oops"
   },
 
     {
-    imgSrc: hero1png,
-    header: "Master",
-    text: "Læs videre på en 2-årig kandidatuddannelse efter din bachelor. Find din kandidatuddannelse her",
-    link: "//kandidat.au.dk/",
-    imgAlt: "Master"
+    imgSrc: safari,
+    header: "Expedition to Africa",
+    text: "A 1948 Danish expedition to Africa collected animals for museum taxidermy—revealing a complex legacy of science, display, and colonialism.",
+    link: "/",
+    imgAlt: "Expedition to Africa"
   },
 
     {
-    imgSrc: hero1png,
-    header: "Master",
-    text: "Læs videre på en 2-årig kandidatuddannelse efter din bachelor. Find din kandidatuddannelse her",
-    link: "//kandidat.au.dk/",
-    imgAlt: "Master"
+    imgSrc: global,
+    header: "The Global Backyard",
+    text: "Discover the planet’s wildlife through taxidermy—from local creatures to exotic species.",
+    link: "/",
+    imgAlt: "The Global Backyard"
   },
 
     {
-    imgSrc: hero1png,
-    header: "Master",
-    text: "Læs videre på en 2-årig kandidatuddannelse efter din bachelor. Find din kandidatuddannelse her",
-    link: "//kandidat.au.dk/",
-    imgAlt: "Master"
+    imgSrc: nature,
+    header: "Our Nature",
+    text: "Explore Denmark’s wild side—its landscapes, animals, and ecosystems—in this celebration of the nature that surrounds us.",
+    link: "/",
+    imgAlt: "Our Nature"
   },
-
-    {
-    imgSrc: hero1png,
-    header: "Master",
-    text: "Læs videre på en 2-årig kandidatuddannelse efter din bachelor. Find din kandidatuddannelse her",
-    link: "//kandidat.au.dk/",
-    imgAlt: "Master"
-  },
-  // Add more card objects as needed
 ];
 
 const Exhibitions: React.FC = () => {
@@ -120,12 +115,9 @@ const Exhibitions: React.FC = () => {
       <div className="horizontal-scroll horizontal-scroll--snap">
         <div className="horizontal-scroll__header">
           <div className="horizontal-scroll__header__content">
-            <h3 className="horizontal-scroll__header__content__title">
-              With scroll snapping
-            </h3>
-            <a className="link--arrow" href="#">
-              More
-            </a>
+            <h2 className="horizontal-scroll__header__content__title">
+              Our Exhibitions
+            </h2>
           </div>
           <ul
             className="horizontal-scroll__header__controls"

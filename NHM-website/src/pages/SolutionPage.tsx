@@ -1,11 +1,14 @@
 import React from 'react';
+import Hero from '../components/Hero';
 
 const SolutionPage: React.FC = () => {
     return (
-        <div>
-            <h1>Solution Page</h1>
-            <p>This is a template for the Solution Page.</p>
-        </div>
+    <>
+    <Hero />
+    <div className="page__content">
+        
+    </div>
+    </>
     );
 };
 

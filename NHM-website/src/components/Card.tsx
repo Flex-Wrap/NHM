@@ -12,7 +12,7 @@ const Card: React.FC<CardProps> = ({
     imgSrc,
     header,
     text,
-    link = "//bachelor.au.dk/",
+    link = "/",
     imgAlt = "",
 }) => (
     <div className="aubanner hastext aubanner-2 bg-dark-magenta  csc-default" style={{ backgroundColor: "#f5f5f5" }}>
@@ -24,7 +24,7 @@ const Card: React.FC<CardProps> = ({
                 alt={imgAlt}
             />
             <div className="aubanner-content" style={{ padding: "0 16px" }}>
-                <h2>{header}</h2>
+                <h3>{header}</h3>
                 <p>{text}</p>
             </div>
         </a>
