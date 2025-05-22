@@ -2,15 +2,22 @@ import React from "react";
 import Hero from "../components/Hero";
 import Exhibitions from "../components/Exhibitions";
 import Events from "../components/Events";
+import hero from "../assets/hero1.png";
 
 const HomePage: React.FC = () => {
   return (
     <>
-    <Hero />
-    <div className="page__content">
-      <Exhibitions />
-      <Events />
-    </div>
+      <Hero
+        imgSrc={hero}
+        imgAlt="Safari Picture"
+        title={<><span>Expedition to </span><strong>Africa</strong></>}
+        description="Be part of the story!"
+        buttonText="Visit Now"
+      />
+      <div className="page__content">
+        <Exhibitions />
+        <Events />
+      </div>
     </>
   );
 };
