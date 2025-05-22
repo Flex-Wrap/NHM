@@ -1,4 +1,5 @@
 import React, { type ReactNode } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface HeroProps {
   imgSrc: string;
@@ -6,6 +7,7 @@ interface HeroProps {
   title: ReactNode;
   description: string;
   buttonText: string;
+  buttonLink?: string;
 }
 
 const Hero: React.FC<HeroProps> = ({
@@ -14,7 +16,14 @@ const Hero: React.FC<HeroProps> = ({
   title,
   description,
   buttonText,
+  buttonLink = "/",
 }) => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate(buttonLink);
+  };
+
   return (
     <div className="hero">
       <picture>
@@ -25,7 +34,7 @@ const Hero: React.FC<HeroProps> = ({
         <p className="hero__description">{description}
           <button className="hero__button--inline inline-button icon-link-internal"></button>
         </p>
-        <button className="hero__button--block button button--icon--right icon-link-internal button--icon">
+        <button className="hero__button--block button button--icon--right icon-link-internal button--icon" onClick={handleButtonClick}>
           {buttonText}
         </button>
       </div>

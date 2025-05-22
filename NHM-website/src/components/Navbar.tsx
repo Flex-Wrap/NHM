@@ -10,23 +10,14 @@ const Navbar: React.FC = () => {
           Gå til sideindhold
         </a>
         <h1 className="nav__home">
-          <a className="nav__home__title" href="#">
+          <a className="nav__home__title" href="/">
             Naturhistorisk Museum
           </a>
         </h1>
         <div className="nav__site">
           <div className="nav__items">
-            <a className="nav__item nav__item--active" href="#">
-              Education
-            </a>
-            <a className="nav__item" href="#">
-              Research
-            </a>
-            <a className="nav__item" href="#">
-              Collaboration
-            </a>
-            <a className="nav__item" href="#">
-              About
+            <a className="nav__item nav__item--active" href="/solution">
+              Expedition to Africa
             </a>
           </div>
           <button

@@ -13,6 +13,7 @@ const HomePage: React.FC = () => {
         title={<><span>Expedition to </span><strong>Africa</strong></>}
         description="Be part of the story!"
         buttonText="Visit Now"
+        buttonLink="/solution"
       />
       <div className="page__content">
         <Exhibitions />
