@@ -3,6 +3,8 @@ import Hero from '../components/Hero';
 import Intro from '../components/Intro';
 import Features from '../components/Features';
 import StoryDescription from '../components/StoryDescription';
+import AppInfo from '../components/AppInfo';
+import Download from '../components/Download';
 
 const SolutionPage: React.FC = () => {
     return (
@@ -12,6 +14,8 @@ const SolutionPage: React.FC = () => {
         <Intro />
         <Features />
         <StoryDescription />
+        <AppInfo />
+        <Download />
     </div>
     </>
     );

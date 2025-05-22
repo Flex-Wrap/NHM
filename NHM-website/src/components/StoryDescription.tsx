@@ -1,8 +1,9 @@
-import headphones from "../assets/headphones.svg";
+import headphones from "../assets/headphones-black.svg";
 import compass from "../assets/compass.svg"; 
 import mockup1 from "../assets/mockup1.png";   
 import mockup2 from "../assets/mockup2.png";
 import StoryDescriptionCard from "./StoryDescriptionCard";
+import Quote from "./Quote";
 
 const StoryDescription: React.FC = () => {
     const descriptionSections = [
@@ -18,6 +19,7 @@ const StoryDescription: React.FC = () => {
                 "Questions arise. What are the costs of bringing the wild into captivity? And who truly pays the price?"
             ],
             imgAlt: "App Mockup",
+            reverse: false
         },
         {
             imgSrc: mockup2,
@@ -28,6 +30,7 @@ const StoryDescription: React.FC = () => {
                 "It’s a journey that challenges what you thought you knew about yourself, the delicate balance of nature, and the deep, often surprising connections that bind all living things in this wild world around you."
             ],
             imgAlt: "App Mockup",
+            reverse: true
         }
     ]
 
@@ -38,6 +41,7 @@ const StoryDescription: React.FC = () => {
           Unfold the story: The 1948 African Expedition
         </h2>
         <StoryDescriptionCard {...descriptionSections[0]} />
+        <Quote />
         <StoryDescriptionCard {...descriptionSections[1]} />
       </div>
     </>
