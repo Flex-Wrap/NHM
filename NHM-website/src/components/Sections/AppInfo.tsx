@@ -1,7 +1,7 @@
 import map from "../assets/map.png";
 import events from "../assets/events.png";
 import global from "../assets/global-backyard.jpg";
-import CardSecond from "./CardSecond";
+import CardSecond from "../Cards/CardSecond";
 
 const AppInfo: React.FC = () => {
   const cards = [

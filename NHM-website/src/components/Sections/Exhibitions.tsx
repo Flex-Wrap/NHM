@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import Card from "./Card";
+import Card from "../Cards/Card";
 import beetles from "../assets/beetles.jpg";
 import oops from '../assets/oops.jpg';
 import safari from '../assets/safari.jpg';

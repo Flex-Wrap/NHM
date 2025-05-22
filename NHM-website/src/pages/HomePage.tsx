@@ -1,7 +1,7 @@
 import React from "react";
-import Hero from "../components/Hero";
-import Exhibitions from "../components/Exhibitions";
-import Events from "../components/Events";
+import Hero from "../components/General/Hero";
+import Exhibitions from "../components/Sections/Exhibitions";
+import Events from "../components/Sections/Events";
 import hero from "../assets/hero1.png";
 
 const HomePage: React.FC = () => {

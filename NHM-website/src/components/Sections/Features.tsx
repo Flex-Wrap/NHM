@@ -3,7 +3,7 @@ import camera from "../assets/camera.svg";
 import film from "../assets/film.svg";
 import feather from "../assets/feather.svg";
 import type React from "react";
-import FeatureCard from "./FeatureCard";
+import FeatureCard from "../Cards/FeatureCard";
 
 const Features: React.FC = () => {
   const features = [

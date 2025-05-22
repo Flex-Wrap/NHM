@@ -2,8 +2,8 @@ import headphones from "../assets/headphones-black.svg";
 import compass from "../assets/compass.svg"; 
 import mockup1 from "../assets/mockup1.png";   
 import mockup2 from "../assets/mockup2.png";
-import StoryDescriptionCard from "./StoryDescriptionCard";
-import Quote from "./Quote";
+import StoryDescriptionCard from "../Cards/StoryDescriptionCard";
+import Quote from "../Cards/Quote";
 
 const StoryDescription: React.FC = () => {
     const descriptionSections = [

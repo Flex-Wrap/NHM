@@ -1,10 +1,10 @@
 import React from 'react';
-import Hero from '../components/Hero';
-import Intro from '../components/Intro';
-import Features from '../components/Features';
-import StoryDescription from '../components/StoryDescription';
-import AppInfo from '../components/AppInfo';
-import Download from '../components/Download';
+import Hero from '../components/General/Hero';
+import Intro from '../components/Sections/Intro';
+import Features from '../components/Sections/Features';
+import StoryDescription from '../components/Sections/StoryDescription';
+import AppInfo from '../components/Sections/AppInfo';
+import Download from '../components/Sections/Download';
 import hero from "../assets/hero2.png";
 
 const SolutionPage: React.FC = () => {
