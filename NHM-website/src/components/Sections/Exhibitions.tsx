@@ -1,10 +1,10 @@
 import React, { useRef, useEffect } from "react";
 import Card from "../Cards/Card";
-import beetles from "../assets/beetles.jpg";
-import oops from '../assets/oops.jpg';
-import safari from '../assets/safari.jpg';
-import global from '../assets/global-backyard.jpg';
-import nature from '../assets/nature.jpg';
+import beetles from "../../assets/beetles.jpg";
+import oops from "../../assets/oops.jpg";
+import safari from "../../assets/safari.jpg";
+import global from "../../assets/global-backyard.jpg";
+import nature from "../../assets/nature.jpg";
 
 const cards = [
   {
@@ -12,38 +12,38 @@ const cards = [
     header: "BEETLES!",
     text: "A striking collection of beetles from around the world, celebrating their beauty and diversity.",
     link: "/",
-    imgAlt: "BEETLES!"
+    imgAlt: "BEETLES!",
   },
   {
     imgSrc: oops,
     header: "Oops",
     text: "Explore the astonishing role of coincidence in the universe, from everyday quirks to the ultimate fluke—the Big Bang.",
     link: "/",
-    imgAlt: "Oops"
+    imgAlt: "Oops",
   },
 
-    {
+  {
     imgSrc: safari,
     header: "Expedition to Africa",
     text: "A 1948 Danish expedition to Africa collected animals for museum taxidermy—revealing a complex legacy of science.",
     link: "/",
-    imgAlt: "Expedition to Africa"
+    imgAlt: "Expedition to Africa",
   },
 
-    {
+  {
     imgSrc: global,
     header: "The Global Backyard",
     text: "Discover the planet’s wildlife through taxidermy—from local creatures to exotic species.",
     link: "/",
-    imgAlt: "The Global Backyard"
+    imgAlt: "The Global Backyard",
   },
 
-    {
+  {
     imgSrc: nature,
     header: "Our Nature",
     text: "Explore Denmark’s wild side—its landscapes, animals, and ecosystems—in this celebration of the nature that surrounds us.",
     link: "/",
-    imgAlt: "Our Nature"
+    imgAlt: "Our Nature",
   },
 ];
 
@@ -78,7 +78,10 @@ const Exhibitions: React.FC = () => {
         activateButton(prevBtn);
       }
       // Next button
-      if (scrollElement.scrollLeft + scrollElement.clientWidth >= scrollElement.scrollWidth - 2) {
+      if (
+        scrollElement.scrollLeft + scrollElement.clientWidth >=
+        scrollElement.scrollWidth - 2
+      ) {
         disableButton(nextBtn);
       } else {
         activateButton(nextBtn);
@@ -104,7 +107,8 @@ const Exhibitions: React.FC = () => {
     if (nextBtn) nextBtn.addEventListener("click", handleNext);
 
     return () => {
-      if (scrollElement) scrollElement.removeEventListener("scroll", handleScroll);
+      if (scrollElement)
+        scrollElement.removeEventListener("scroll", handleScroll);
       if (prevBtn) prevBtn.removeEventListener("click", handlePrev);
       if (nextBtn) nextBtn.removeEventListener("click", handleNext);
     };
@@ -154,7 +158,10 @@ const Exhibitions: React.FC = () => {
           aria-describedby="scroll-paddingsnap"
           style={{ overflowX: "auto", display: "flex" }}
         >
-          <ul className="cards-container cards-container--row" style={{ display: "flex" }}>
+          <ul
+            className="cards-container cards-container--row"
+            style={{ display: "flex" }}
+          >
             {cards.map((card, idx) => (
               <li className="horizontal-scroll__snap-item card" key={idx}>
                 <Card

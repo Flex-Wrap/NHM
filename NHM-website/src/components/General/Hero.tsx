@@ -32,7 +32,7 @@ const Hero: React.FC<HeroProps> = ({
       <div className="hero__text" style={{width: "40%", transform: "translateY(-50%)", left: "4%"}}>
         <h1 className="hero__title">{title}</h1>
         <p className="hero__description">{description}
-          <button className="hero__button--inline inline-button icon-link-internal"></button>
+          <button className="hero__button--inline inline-button icon-link-internal" onClick={handleButtonClick}></button>
         </p>
         <button className="hero__button--block button button--icon--right icon-link-internal button--icon" onClick={handleButtonClick}>
           {buttonText}

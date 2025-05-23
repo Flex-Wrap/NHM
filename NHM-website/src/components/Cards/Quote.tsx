@@ -1,4 +1,4 @@
-import quotiations from "../assets/quotations.svg";
+import quotiations from "../../assets/quotations.svg";
 
 const Quote: React.FC = () => {
   return (

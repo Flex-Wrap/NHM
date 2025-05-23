@@ -1,4 +1,6 @@
-import "../components/FeatureCard.css";
+import React from "react";
+import "./FeatureCard.css";
+
 
 interface FeatureCardProps {
     imgSrc: string;

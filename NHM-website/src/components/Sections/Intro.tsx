@@ -1,5 +1,5 @@
 import type React from "react";
-import safariIntro from "../assets/safari-intro.jpg";
+import safariIntro from "../../assets/safari-intro.jpg";
 
 const Intro: React.FC = () => {
     return (

@@ -1,5 +1,5 @@
-import mockup from "../assets/mockup3.png";
-import download from "../assets/download.svg";
+import mockup from "../../assets/mockup3.png";
+import download from "../../assets/download.svg";
 
 const Download: React.FC = () => {
   return (
